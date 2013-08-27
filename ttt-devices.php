@@ -143,18 +143,12 @@ function browser_body_class($classes) {
                 $classes[] = 'unknown-browser';
             }
 	
-		//add tttevent class to body if the post have an event
-		$tttevents = new TTTEvents_Front();
-		if ( $tttevents->get_events(array('p' => get_the_ID() )) )
-			$classes[] = 'tttevent';
-
-
-		if ( is_tttdevice('mobile') )
-			$classes[] = 'mobile';
-		elseif ( is_tttdevice('tablet') )
-			$classes[] = 'tablet';
-		elseif ( is_tttdevice('desktop') )
-			$classes[] = 'desktop';
+	if ( is_tttdevice('mobile') )
+		$classes[] = 'mobile';
+	elseif ( is_tttdevice('tablet') )
+		$classes[] = 'tablet';
+	elseif ( is_tttdevice('desktop') )
+		$classes[] = 'desktop';
  
     return $classes;
 }
