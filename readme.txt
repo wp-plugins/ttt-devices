@@ -1,5 +1,5 @@
 === TTT Device ===
-Contributors: gabrielperezs, lonchbox
+Contributors: 33themes, gabrielperezs, lonchbox
 Tags: devices, mobile
 Requires at least: 3.4
 Tested up to: 3.6
@@ -21,43 +21,43 @@ Based on http://wordpress.org/extend/themes/thematic
 We add a "body_class" filter with the device information:
 
 * For a desktop in linux
-``
+`
 <html>
 <body class="linux chrome desktop">
 </body>
 </html>
-``
+`
 
 * For a desktop in Mac
-``
+`
 <html>
 <body class="mac firefox desktop">
 </body>
 </html>
-``
+`
 
 * For a iphone mobile
-``
+`
 <html>
 <body class="mac safari mobile">
 </body>
 </html>
-``
+`
 
 * For a android mobile
-``
+`
 <html>
 <body class="chrome linux mobile">
 </body>
 </html>
-``
+`
 
 And also some for IE, nobody worried about it... ;)
 
 
 = How to indentify the device =
 
-``
+`
 <?php
 if ( is_tttdevice('desktop') ) {
 	echo "this is a desktop device";
@@ -72,21 +72,21 @@ else {
 	echo "Opps...  we don't know what this device is!!";
 }
 ?>
-``
+`
 
 = How to remove the sidebar for mobile only =
-``
+`
 <?php
 if ( ! is_tttdevice('mobile') ) {
 	get_sidebar();
 }
 ?>
-``
+`
 
 This means, the sidebar will not -print- for mobile divices. This is not the same has "hidden" in CSS.
 
 = Other keyword to dettect devices =
-``
+`
 <?php
 if ( is_tttdevice('iphone') ) {
 	echo "this is an iPhone";
@@ -101,7 +101,7 @@ if ( is_tttdevice('mobile') ) {
 	echo "this is a mobile";
 }
 ?>
-``
+`
 
 
 
