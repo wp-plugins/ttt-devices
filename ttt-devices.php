@@ -3,7 +3,7 @@
 Plugin Name: TTT Devices
 Plugin URI: http://www.33themes.com
 Description: Simple detectior device: mobile, tablet, richtCSS. Only -interface- base on http://www.mobileesp.com library. Insert device class in <body>
-Version: 1.0
+Version: 0.3
 Author: 33 Themes UG i.Gr.
 Author URI: http://www.33themes.com
 License: MIT License
