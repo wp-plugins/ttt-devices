@@ -107,7 +107,9 @@ if ( is_tttdevice('mobile') ) {
 
 = Stop loading some js for mobile =
 
-Is very usefull if you need to make your site faster for mobile or tablet, this browsers can handle well some javascripts effects. You can stop remove them from a device like this:
+Is very usefull if you need to make your site faster for mobile or tablet, this browsers can handle well some javascripts effects. You can stop remove them from a device like this. Example:
+
+In your functions.php file:
 
 `
 function heavyanimation_script() {
