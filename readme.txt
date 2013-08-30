@@ -7,7 +7,9 @@ Stable tag: 0.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Description: Simple way to detect the client device at php level.
+Custom device performance.
+
+Make your Responsive Design better. Beyond CSS @media Queries.
 
 
 == Description ==
@@ -16,7 +18,7 @@ Simple way to detect the client device at php level.
 
 = Identify the device with a CSS body class =
 
-Based on http://wordpress.org/extend/themes/thematic
+Based on http://wordpress.org/extend/themes/thematic with some improvements!
 
 We add a "body_class" filter with the device information:
 
@@ -52,7 +54,7 @@ We add a "body_class" filter with the device information:
 </html>
 `
 
-And also some for IE, nobody worried about it... ;)
+And also some for IE ;)
 
 
 = How to indentify the device =
@@ -103,6 +105,19 @@ if ( is_tttdevice('mobile') ) {
 ?>
 `
 
+= Stop loading some js for mobile =
+
+Is very usefull if you need to make your site faster for mobile or tablet, this browsers can handle well some javascripts effects. You can stop remove them from a device like this:
+
+`
+function heavyanimation_script() {
+	if ( is_tttdevice('desktop') ) { 
+	 	wp_enqueue_script( 'heavyanimation', get_template_directory_uri() . '/js/havyscript.js', array('jquery'));
+	}
+}	
+add_action('wp_enqueue_scripts', 'heavyanimation_script');
+`
+This means that js only load in desktop devices, easy :)
 
 
 == Installation ==
@@ -111,7 +126,7 @@ This section describes how to install the plugin and get it working.
 
 e.g.
 
-1. Upload `plugin-name.php` to the `/wp-content/plugins/` directory
+1. Upload `ttt-devices` folder to the `/wp-content/plugins/` directory
 1. Activate the plugin through the 'Plugins' menu in WordPress
 
 == Frequently Asked Questions ==
