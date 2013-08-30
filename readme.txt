@@ -1,6 +1,6 @@
 === TTT Device ===
 Contributors: 33themes, gabrielperezs, lonchbox
-Tags: devices, mobile
+Tags: devices, mobile, user agents, media queries, body class, tablet, desktop, browser class, device, responsive
 Requires at least: 3.4
 Tested up to: 3.6
 Stable tag: 0.3
