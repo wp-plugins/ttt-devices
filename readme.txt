@@ -18,10 +18,6 @@ Simple way to detect the client device at php level.
 
 = Identify the device with a CSS body class =
 
-Based on http://wordpress.org/extend/themes/thematic with some improvements!
-
-We add a "body_class" filter with the device information:
-
 * For a desktop in linux
 `
 <html>
