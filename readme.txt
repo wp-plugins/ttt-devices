@@ -3,7 +3,7 @@ Contributors: 33themes, gabrielperezs, lonchbox
 Tags: devices, mobile, user agents, media queries, body class, tablet, desktop, browser class, device, responsive
 Requires at least: 3.4
 Tested up to: 3.6
-Stable tag: 0.3
+Stable tag: 0.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -90,10 +90,10 @@ if ( is_tttdevice('iphone') ) {
 	echo "this is an iPhone";
 }
 if ( is_tttdevice('android') ) {
-	echo "this is an iPhone";
+	echo "this is an android";
 }
 if ( is_tttdevice('windowsphone') ) {
-	echo "this is an iPhone";
+	echo "this is an windows phone";
 }
 if ( is_tttdevice('mobile') ) {
 	echo "this is a mobile";

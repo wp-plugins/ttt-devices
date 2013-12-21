@@ -91,7 +91,7 @@ function ttt_devices_script() {
         'ttt-devices',
         plugins_url( '/js/ttt-devices.js' , __FILE__ ),
         array( 'jquery' ),
-        '0.4.2'
+        '0.4'
     );
 }
 add_action('wp_enqueue_scripts','ttt_devices_script',0);
