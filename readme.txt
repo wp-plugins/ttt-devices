@@ -1,8 +1,8 @@
 === TTT Device ===
-Contributors: 33themes, gabrielperezs, lonchbox
+Contributors: 33themes, gabrielperezs, lonchbox, tomasog
 Tags: devices, mobile, user agents, media queries, body class, tablet, desktop, browser class, device, responsive
 Requires at least: 3.4
-Tested up to: 3.6
+Tested up to: 3.8.1
 Stable tag: 0.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
