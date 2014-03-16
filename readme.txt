@@ -136,3 +136,5 @@ We use the user agent of the browser client.
 = Use some standar library? =
 
 Yes, we use the sources from http://www.mobileesp.com 
+
+For better performance with server cache systems like varnish the plugin detect the browser using Javascript. The idea came from this threat: http://stackoverflow.com/a/2401861
