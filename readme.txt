@@ -1,6 +1,6 @@
 === TTT Device ===
 Contributors: 33themes, gabrielperezs, lonchbox, tomasog
-Tags: devices, mobile, user agents, media queries, body class, tablet, desktop, browser class, device, responsive
+Tags: devices, mobile, user agents, media queries, body class, tablet, desktop, browser class, device, responsive, orientation, portrait, landscape
 Requires at least: 3.4
 Tested up to: 3.8.1
 Stable tag: 0.4
@@ -37,7 +37,14 @@ Simple way to detect the client device at php level.
 * For a iphone mobile
 `
 <html>
-<body class="mac safari mobile">
+<body class="mac safari mobile portrait">
+</body>
+</html>
+`
+* For a iphone mobile landscape
+`
+<html>
+<body class="mac safari mobile landscape">
 </body>
 </html>
 `
