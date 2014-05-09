@@ -1,5 +1,24 @@
+function is_portrait() { 
+	if(window.innerHeight > window.innerWidth)
+		return true;
+	return false;
+}
+try {
+    window.addEventListener("orientationchange", function() {
+        $(document).ready();
+    }, false);
+} catch(e) {}
+
 // Code via: http://stackoverflow.com/a/2401861
 jQuery(document).ready(function($) {
+
+	if ( is_portrait() ) {
+		$('body').removeClass('landscape').addClass('portrait');
+	}
+	else {
+		$('body').removeClass('portrait').addClass('landscape');
+	}
+
     $('body').addClass((function(){
         var ua= navigator.userAgent, tem, v,
             s = ['ttt-devices'],
