@@ -61,7 +61,7 @@ And also for IE ;)
 
 ### How to indentify the device
 
-```
+`
 <?php
 if ( is_tttdevice('desktop') ) {
 	echo "this is a desktop device";
@@ -76,21 +76,21 @@ else {
 	echo "Opps...  we don't know what this device is!!";
 }
 ?>
-```
+`
 
 ### How to remove the sidebar for mobile only
-```
+`
 <?php
 if ( ! is_tttdevice('mobile') ) {
 	get_sidebar();
 }
 ?>
-```
+`
 
 This means, the sidebar will not show in mobile devices. This is not the same has "hidden" in CSS, with TTT Devices the code is not  sent to the client.
 
 ### Other keywords to detect devices
-```
+`
 <?php
 if ( is_tttdevice('iphone') ) {
 	echo "this is an iPhone";
@@ -105,7 +105,7 @@ if ( is_tttdevice('mobile') ) {
 	echo "this is a mobile";
 }
 ?>
-```
+`
 
 ### Stop loading some js for mobile
 
@@ -113,14 +113,14 @@ It is very useful if you need make your site faster for mobile or tablet, these 
 
 In your functions.php file:
 
-```
+`
 function heavyanimation_script() {
 	if ( is_tttdevice('desktop') ) { 
 	 	wp_enqueue_script( 'heavyanimation', get_template_directory_uri() . '/js/havyscript.js', array('jquery'));
 	}
 }	
 add_action('wp_enqueue_scripts', 'heavyanimation_script');
-```
+`
 This means that js only loads in desktop devices, easy :)
 
 
