@@ -1,22 +1,21 @@
-=== TTT Device ===
-Contributors: 33themes, gabrielperezs, lonchbox
-Tags: devices, mobile, user agents, media queries, body class, tablet, desktop, browser class, device, responsive
-Requires at least: 3.4
-Tested up to: 3.6
-Stable tag: 0.4
-License: GPLv2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
+# TTT Device
 
-Custom device performance.
+* Contributors: 33themes, gabrielperezs, lonchbox, tomasog, 11bits
+* Tags: devices, mobile, user agents, media queries, body class, tablet, desktop, browser class, device, responsive, orientation, portrait, landscape
+* Requires at least: 3.4
+* Tested up to: 3.8.1
+* Stable tag: 0.4
+* License: GPLv2 or later
+* License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Make your Responsive Design better. Beyond CSS @media Queries.
+Improve your adaptive web design with detecting the devices that visit your website.
 
 
-== Description ==
+## Description
 
-Simple way to detect the client device at php level.
+This plugin detects the client device in a simple way at php level.
 
-= Identify the device with a CSS body class =
+### Identify the device with a CSS body class
 
 * For a desktop in linux
 `
@@ -34,15 +33,22 @@ Simple way to detect the client device at php level.
 </html>
 `
 
-* For a iphone mobile
+* For an iphone mobile
 `
 <html>
-<body class="mac safari mobile">
+<body class="mac safari mobile portrait">
+</body>
+</html>
+`
+* For an iphone mobile landscape
+`
+<html>
+<body class="mac safari mobile landscape">
 </body>
 </html>
 `
 
-* For a android mobile
+* For an android mobile
 `
 <html>
 <body class="chrome linux mobile">
@@ -50,12 +56,12 @@ Simple way to detect the client device at php level.
 </html>
 `
 
-And also some for IE ;)
+And also for IE ;)
 
 
-= How to indentify the device =
+### How to indentify the device
 
-`
+```
 <?php
 if ( is_tttdevice('desktop') ) {
 	echo "this is a desktop device";
@@ -70,21 +76,21 @@ else {
 	echo "Opps...  we don't know what this device is!!";
 }
 ?>
-`
+```
 
-= How to remove the sidebar for mobile only =
-`
+### How to remove the sidebar for mobile only
+```
 <?php
 if ( ! is_tttdevice('mobile') ) {
 	get_sidebar();
 }
 ?>
-`
+```
 
-This means, the sidebar will not -print- for mobile divices. This is not the same has "hidden" in CSS.
+This means, the sidebar will not show in mobile devices. This is not the same has "hidden" in CSS, with TTT Devices the code is not  sent to the client.
 
-= Other keyword to dettect devices =
-`
+### Other keywords to detect devices
+```
 <?php
 if ( is_tttdevice('iphone') ) {
 	echo "this is an iPhone";
@@ -99,40 +105,40 @@ if ( is_tttdevice('mobile') ) {
 	echo "this is a mobile";
 }
 ?>
-`
+```
 
-= Stop loading some js for mobile =
+### Stop loading some js for mobile
 
-Is very usefull if you need to make your site faster for mobile or tablet, this browsers can handle well some javascripts effects. You can stop remove them from a device like this. Example:
+It is very useful if you need make your site faster for mobile or tablet, these browsers can't handle well some javascript effects. You can stop loading them in mobile devices. Example:
 
 In your functions.php file:
 
-`
+```
 function heavyanimation_script() {
 	if ( is_tttdevice('desktop') ) { 
 	 	wp_enqueue_script( 'heavyanimation', get_template_directory_uri() . '/js/havyscript.js', array('jquery'));
 	}
 }	
 add_action('wp_enqueue_scripts', 'heavyanimation_script');
-`
-This means that js only load in desktop devices, easy :)
+```
+This means that js only loads in desktop devices, easy :)
 
 
-== Installation ==
+## Installation
 
 This section describes how to install the plugin and get it working.
 
-e.g.
-
 1. Upload `ttt-devices` folder to the `/wp-content/plugins/` directory
-1. Activate the plugin through the 'Plugins' menu in WordPress
+2. Activate the plugin through the 'Plugins' menu in WordPress
 
-== Frequently Asked Questions ==
+## Frequently Asked Questions
 
-= How the plugin detected devices? =
+**How does the plugin detecte devices?**
 
 We use the user agent of the browser client.
 
-= Use some standar library? =
+**Does the plugin use some standar library?**
 
 Yes, we use the sources from http://www.mobileesp.com 
+
+For better performance with server cache systems like varnish the plugin detects the browser using Javascript. The idea came from this threat: http://stackoverflow.com/a/2401861
